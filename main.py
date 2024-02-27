@@ -15,7 +15,7 @@ while True:
     
     from random import randint
     computador_escolha = randint (0,2)
-    
+    #O Rodrigo esteve aqui
 
   # --------------------------------------------------
   # FAÇA COM QUE A ESCOLHA DO COMPUTADOR SEJA ALEATÓRIA
