@@ -12,8 +12,10 @@ while True:
 
     opcoes = ["Pedra", "Papel", "Tesoura"]
     jogador_escolha -= 1  # Ajusta para índice da lista
-
-    computador_escolha = 1
+    
+    from random import randint
+    computador_escolha = randint (0,2)
+    
 
   # --------------------------------------------------
   # FAÇA COM QUE A ESCOLHA DO COMPUTADOR SEJA ALEATÓRIA
