@@ -1,26 +1,36 @@
-import random
+while True:
+    print("Escolha uma opção:")
+    print("1. Pedra")
+    print("2. Papel")
+    print("3. Tesoura")
 
-# Define os caracteres para a nova senha
-minusculo = "abcdefghijklmnopqrstuvxyz"
-maiusculo = "ABCDEFGHIJKLMNOPQRSTUVXYZ"
-especiais = "!_-.;:[]()"
+    jogador_escolha = int(input("Digite o número: "))
 
-# -------------------------------------------------------------
-# AGORA, VOCÊ DEVE ADICIONAR CARACTERES NUMÉRIOS PARA A SENHA.
-# -------------------------------------------------------------
+    if jogador_escolha < 1 or jogador_escolha > 3:
+        print("Escolha inválida. Tente novamente.")
+        continue
 
-# Junta todos os caracteres em uma única string
-tudo = minusculo + maiusculo + especiais
-tamanho = 12  # Tamanho da senha
+    opcoes = ["Pedra", "Papel", "Tesoura"]
+    jogador_escolha -= 1  # Ajusta para índice da lista
 
-# Inicializa a senha como uma string vazia
-senha = ""
+    computador_escolha = 1
 
-# Gera a senha selecionando aleatoriamente caracteres da string "tudo"
-for _ in range(tamanho):
-    senha += random.choice(tudo)
+  # --------------------------------------------------
+  # FAÇA COM QUE A ESCOLHA DO COMPUTADOR SEJA ALEATÓRIA
+  # --------------------------------------------------
 
-# OUTPUT
-print("=========================================")
-print("\nTa aqui a senha seu preguiçoso:", senha)
-print("=========================================")
+    print("Você escolheu:", opcoes[jogador_escolha])
+    print("O computador escolheu:", opcoes[computador_escolha])
+
+    if jogador_escolha == computador_escolha:
+        print("Empate!")
+    elif (jogador_escolha == 0 and computador_escolha == 2) or \
+         (jogador_escolha == 1 and computador_escolha == 0) or \
+         (jogador_escolha == 2 and computador_escolha == 1):
+        print("Você ganhou!")
+    else:
+        print("Você perdeu!")
+
+    jogar_novamente = input("Deseja jogar novamente? (s/n): ")
+    if jogar_novamente.lower() != "s":
+        break
