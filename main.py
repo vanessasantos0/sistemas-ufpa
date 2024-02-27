@@ -1,9 +1,13 @@
 import random
 
 # Define os caracteres para a nova senha
-minusculo = "abcdefghijklmnopqrstuvxyz"  # Letras minúsculas
-maiusculo = "ABCDEFGHIJKLMNOPQRSTUVXYZ"  # Letras maiúsculas
-especiais = "!_-.;:[]()"  # Caracteres especiais
+minusculo = "abcdefghijklmnopqrstuvxyz"
+maiusculo = "ABCDEFGHIJKLMNOPQRSTUVXYZ"
+especiais = "!_-.;:[]()"
+
+# -------------------------------------------------------------
+# AGORA, VOCÊ DEVE ADICIONAR CARACTERES NUMÉRIOS PARA A SENHA.
+# -------------------------------------------------------------
 
 # Junta todos os caracteres em uma única string
 tudo = minusculo + maiusculo + especiais
